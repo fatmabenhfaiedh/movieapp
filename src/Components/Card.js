@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 const Card = ({movie}) => {
     return (
@@ -15,8 +17,9 @@ const Card = ({movie}) => {
                     <i key={el} style={{color:"red"}} class="fas fa-star"></i> : <i key={el} class="fas fa-star"></i>))
                 }
                 </div>
+
+                <Link to={`/Description/${movie.year}`} class="btn btn-primary">Description</Link>
                 
-                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
             </div>
         </div>
